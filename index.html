@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة وعي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🌟 رحلة وعي</h1>
+            <p class="subtitle">معاً لمجتمع آمن، واعي، ونظيف</p>
+        </header>
+
+        <div id="step1" class="step active">
+            <h3>تسجيل الدخول</h3>
+      
+            <div id="userInfo">
+                <input type="text" id="firstName" placeholder="الاسم الأول">
+                <input type="text" id="lastName" placeholder="الاسم الأخير">
+            </div>
+
+            <button onclick="handleLogin()">ابدأ الرحلة</button>
+        </div>
+
+
+
+        <div id="storyStep" class="step">
+            <div class="progress-bar"><div id="progress"></div></div>
+            <h3 id="storyTitle"></h3>
+            <p id="storyText" class="story-box"></p>
+            <div id="options"></div>
+        </div>
+
+      <div id="resultStep" class="step">
+    <h2 class="finish-title">🎉 اكتملت الرحلة</h2>
+
+    <div id="analysisText" class="analysis-box"></div>
+
+    <div class="analysis-box" style="background:#fff3e0; color:#e65100; text-align:right;">
+        <h3>📞 أرقام التوعية والدعم في مصر</h3>
+
+        <p>
+            <strong>الابتزاز الإلكتروني:</strong><br>
+            📌 الشرطة المصرية: <strong>122</strong><br>
+            📌 خط نجدة الطفل: <strong>108</strong>
+        </p>
+
+        <p>
+            <strong>التنمر:</strong><br>
+            📌 خط نجدة الطفل: <strong>108</strong>
+        </p>
+
+        <p>
+            <strong>التحرش:</strong><br>
+            📌 الشرطة المصرية: <strong>122</strong><br>
+            📌 المجلس القومي للمرأة: <strong>15115</strong>
+        </p>
+
+        <p style="font-size:14px; margin-top:10px;">
+            🔒 جميع المكالمات سرية – طلب المساعدة شجاعة وليس ضعف
+        </p>
+    </div>
+
+    <button onclick="location.reload()">العودة للرئيسية</button>
+</div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

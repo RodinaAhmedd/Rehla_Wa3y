@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+/* منع أي خروج عن الشاشة */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #00796b;
+    --secondary: #4db6ac;
+    --bg: #f4f7f6;
+    --white: #ffffff;
+    --text: #333;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text);
+}
+
+/* الحاوية الأساسية */
+.container {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 95%;
+    max-width: 600px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+h1 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+p.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.step { display: none; }
+.step.active {
+    display: block;
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-family: 'Cairo';
+    outline: none;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 8px rgba(77, 182, 172, 0.2);
+}
+
+/* Buttons */
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 15px;
+    transition: 0.3s;
+    min-height: 44px; /* مناسب للمس */
+}
+
+button:hover {
+    background: #004d40;
+    transform: translateY(-2px);
+}
+
+.role-btn {
+    background: var(--secondary);
+    margin-top: 10px;
+}
+
+/* صندوق القصة */
+.story-box { 
+    background: #f9fbf9;
+    padding: 25px;
+    border-radius: 15px;
+    border-right: 5px solid var(--primary);
+    text-align: right;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    background: var(--primary);
+    width: 0%;
+    transition: 0.5s;
+}
+
+/* خيارات القصة */
+.option-btn {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    margin-bottom: 12px;
+    text-align: right;
+    padding: 14px 20px;
+    font-size: 16px;
+    min-height: 44px;
+}
+
+.option-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* صندوق التحليل */
+.analysis-box {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 12px;
+    color: #2e7d32;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ===================== */
+/* 📱 Responsive للموبايل */
+/* ===================== */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2, h3 {
+        font-size: 18px;
+    }
+
+    p, .story-box {
+        font-size: 15px;
+    }
+
+    input, button, .option-btn {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
