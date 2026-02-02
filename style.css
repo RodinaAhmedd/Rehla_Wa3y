@@ -190,3 +190,16 @@ button:hover {
         padding: 12px;
     }
 }
+
+#readSceneBtn {
+    display: none; /* مخفي افتراضيًا */
+    background: #ff9800;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#readSceneBtn:hover {
+    background: #f57c00;
+}
+
+
